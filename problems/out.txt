@@ -1,5 +1,27 @@
-CASE:1 
-5 found at 4 
-CASE:2 
-2 Not Found 
-3 found at 3 
+Adventures
+in
+Disneyland
+Two
+blondes
+were
+going
+to
+Disneyland
+when
+they
+came
+to
+a
+fork
+in
+the
+road.
+The
+sign
+read:
+"Disneyland
+Left."
+So
+they
+went
+home.
