@@ -9,8 +9,8 @@
       "command": "g++",
       "args": [
         "-g", //表示在生成的可执行文件中加入调试信息,如果你要调试程序,-g参数必不可少
-        // "problems/UVA-10815.cpp"
-        "homework/t3.cpp"
+        "problems/UVA-156.cpp"
+        // "homework/t3.cpp"
       ],
       "presentation": {
         "reveal": "never"
