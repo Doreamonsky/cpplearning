@@ -9,7 +9,7 @@
       "command": "g++",
       "args": [
         "-g", //表示在生成的可执行文件中加入调试信息,如果你要调试程序,-g参数必不可少
-        "problems/UVA-12096.cpp" //你代码位置 比如123.cpp
+        "homework/w3/t3.cpp" //你代码位置 比如123.cpp
 
         // "homework/t3.cpp"
       ],
