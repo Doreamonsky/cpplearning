@@ -1,6 +1,8 @@
 #include <map>
 #include <list>
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 // vector
 // 　　vector与数组类似，拥有一段连续的内存空间，并且起始地址不变。便于随机访问，时间复杂度为O（1），但因为内存空间是连续的，所以在进入插入和删除操作时，会造成内存块的拷贝，时间复杂度为O（n）。
@@ -83,6 +85,40 @@ int main()
     {
         cout << *nIt << endl;
     }
+
+    cout << "Use Auto to foreach" << endl;
+
+    for (auto p : nList)
+    {
+        cout << p << endl;
+    }
+
+    //下面是各种变量截取的选项：
+    // [] 不截取任何变量
+    // [&} 截取外部作用域中所有变量，并作为引用在函数体中使用
+    // [=] 截取外部作用域中所有变量，并拷贝一份在函数体中使用
+    // [=, &foo]   截取外部作用域中所有变量，并拷贝一份在函数体中使用，但是对foo变量使用引用
+    // [bar]   截取bar变量并且拷贝一份在函数体重使用，同时不截取其他变量
+    // [this]            截取当前类中的this指针。如果已经使用了&或者=就默认添加此选项。
+
+    for_each(nList.begin(), nList.end(), [](int &val) {
+        cout << val << endl;
+    });
+
+    vector<int> valList = {12, 32, -2, -5, -32};
+
+    cout << "Sor number by abs val" << endl;
+
+    sort(valList.begin(), valList.end(), [=](int &a, int &b) { return abs(a) < abs(b); });
+
+    for (auto p : valList)
+    {
+        cout << p << endl;
+    }
+    //Lambda
+    auto lambda = [](int x, int y) { return x + y; };
+
+    cout << lambda(1, 2) << endl;
 
     cout << "2nd: " << *++nList.begin() << endl;
 }
