@@ -12,7 +12,9 @@
 			"*.tcc": "cpp",
 			"istream": "cpp",
 			"stack": "cpp",
-			"array": "cpp"
+			"array": "cpp",
+			"cmath": "cpp",
+			"ostream": "cpp"
 		}
 	}
 }
