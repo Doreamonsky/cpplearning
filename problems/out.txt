@@ -1,0 +1,44 @@
+Bfs
+5
+4
+8
+11
+13
+4
+7
+2
+1
+Dfs By Iteration
+5
+4
+11
+7
+2
+8
+13
+4
+1
+Dfs By Stack
+5
+4
+11
+7
+2
+8
+13
+4
+1
+Tree Finished
+Bfs
+0
+3
+4
+Dfs By Iteration
+0
+3
+4
+Dfs By Stack
+0
+3
+4
+Tree Finished

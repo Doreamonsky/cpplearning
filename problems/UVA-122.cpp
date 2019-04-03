@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string.h>
 #include <map>
+#include <queue>
+#include <stack>
 
 using namespace std;
 
@@ -53,7 +55,75 @@ void AddNode(char *pos, int val)
         current->hasVal = true;
     }
 }
+//Breadth First Search
+void Bfs(Node *root)
+{
+    queue<Node *> nodeQueue;
 
+    nodeQueue.push(root);
+
+    while (!nodeQueue.empty())
+    {
+        auto top = nodeQueue.front();
+
+        cout << top->val << endl;
+
+        nodeQueue.pop();
+
+        if (top->left != NULL)
+        {
+            nodeQueue.push(top->left);
+        }
+
+        if (top->right != NULL)
+        {
+            nodeQueue.push(top->right);
+        }
+    }
+}
+
+void Dfs(Node *root)
+{
+    if (root == NULL)
+        return;
+
+    cout << root->val << endl;
+
+    if (root->left != NULL)
+    {
+        Dfs(root->left);
+    }
+    if (root->right != NULL)
+    {
+        Dfs(root->right);
+    }
+}
+
+void DfsByStack(Node *root)
+{
+    stack<Node *> nodeStack;
+
+    nodeStack.push(root);
+
+    while (!nodeStack.empty())
+    {
+        auto top = nodeStack.top();
+
+        cout << top->val << endl;
+
+        nodeStack.pop();
+        //Important If you want to print it from left to right make sure the right branch is pushed into the stack first.
+        if (top->right != NULL)
+        {
+            nodeStack.push(top->right);
+        }
+
+        if (top->left != NULL)
+        {
+            nodeStack.push(top->left);
+        }
+    }
+}
 int main()
 {
     freopen("problems/122.txt", "r", stdin);
@@ -72,8 +142,20 @@ int main()
 
         if (!strcmp(s, "()"))
         {
+            //Bfs
+            cout << "Bfs" << endl;
+            Bfs(mainTree);
+
+            cout << "Dfs By Iteration" << endl;
+            Dfs(mainTree);
+
+            cout << "Dfs By Stack" << endl;
+            DfsByStack(mainTree);
+
+            cout << "Tree Finished" << endl;
+
             mainTree = new Node();
-            break;
+            continue;
         }
         int val;
 
@@ -83,6 +165,4 @@ int main()
 
         AddNode(pos, val);
     }
-
-    cout << "Tree Finished" << endl;
 }
