@@ -20,11 +20,6 @@
       "problemMatcher": [
         "$gcc"
       ]
-    },
-    {
-      "label": "run",
-      "type": "shell",
-      "command": "./a.exe"
     }
   ]
 }
