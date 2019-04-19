@@ -1,21 +1,9 @@
 #include <iostream>
+#include "Fun.hpp"
+
 using namespace std;
 
-template <typename T>
-T const &max(T const *list, unsigned int length)
-{
-    T const *maxValue(list);
-
-    for (unsigned int i = 0; i < length; ++i)
-    {
-        if (list[i] > *maxValue)
-        {
-            maxValue = &list[i];
-        }
-    }
-
-    return *maxValue;
-}
+template int const &max(int const *list, unsigned int length);
 
 int main()
 {
