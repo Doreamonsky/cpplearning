@@ -7,6 +7,8 @@ int main()
 {
     map<float, int> distinctNumList;
 
+    cout << "Enter Ten Numbers: ";
+
     for (int i = 0; i < 10; i++)
     {
         float tempInput = 0;
