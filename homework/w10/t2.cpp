@@ -19,12 +19,17 @@ int main(int argc, char const *argv[])
 
     cout << "Input Student Number:" << endl;
 
+    cin >> number;
+
     for (int i = 0; i < number; i++)
     {
-        string _name;
-        float _score;
+        string _name = "undefined";
+        float _score = 0;
 
-        scanf("%s %d", &_name, &_score);
+        cin >> _name;
+        cin >> _score;
+
+        cout << _name << _score << endl;
 
         studentList.push_back(student(_name, _score));
     }
