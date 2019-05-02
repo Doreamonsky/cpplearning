@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
     {
         a[i] = rand();
     }
-
+    //Sort Before binary Search
     sort(a, a + range);
 
     int randomIndex = randomFromRange(0, range);
