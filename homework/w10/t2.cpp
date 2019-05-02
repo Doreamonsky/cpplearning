@@ -29,8 +29,6 @@ int main(int argc, char const *argv[])
         cin >> _name;
         cin >> _score;
 
-        cout << _name << _score << endl;
-
         studentList.push_back(student(_name, _score));
     }
 
